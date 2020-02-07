@@ -18,28 +18,86 @@ rm(list = ls())
 
 # all packages used for the assignment
 library(mosaic)
-library(tidyverse)
+library(tidyr)
 
 ```
 
 
 
-## Chapter 1 Exercises
+## Chapter 5 Exercises
 
-### Problem 1.1
-
-
-### Problem 1.2
-
+### Problem 5.1
 ```{r}
-print("Hello")
+library(mosaicData)
+library(DataComputing)
+ggplot(data=CPS85,aes(x=sex,y=wage ,fill=married))+geom_bar(stat='identity',position='dodge', width=.9)+ facet_wrap(~union,ncol=3) 
+
+
+```
+### problem 5.2
+```{r}
+ ggplot( data = NCHS, aes(x = bmi)) + geom_density(adjust = 0.36) + aes(colour = sex) + facet_wrap(~pregnant, ncol = 4) + labs(title = "") + theme(legend.position = "right") 
+
+```
+### problem 5.3
+```{r}
+ggplot(data=CPS85,aes(x=exper,y=wage))+geom_point()+aes(colour=married)+scale_x_log10()+scale_y_log10()+facet_wrap(~sector,ncol=4) 
+
 
 ```
 
+##Chapter 6
+### problem 6.1
+```{r}
+#1. 1433B,1433E,1433G,1433Z are all names of the substances
+#2. No
+#3. 
+```
 
-## Chapter 2 Exercises
+### problem 6.2
+```{r}
+#1. Flux variable mapped with filled or hollow dot, log enzym mapped by tick marks from -3 to 5 on y axis, target is mapped by lines at the top of graph, Each gene variable is mapped on a tick mark on x axis, molecule variable mapped by colors of dots
+#2. Some graphical attributes are fill,color,and location. color describes the different molecules. fill describes if it has fluz > 0 or = 0
+#3. Molecule and Enzym concentration
+#4. The two variables are yarget and gene
+```
+### problem 6.3
+```{r}
+#1. Graphical attribute: double star, variable is:negative polarity, Graphical attribute: bar, variable is : center,low,high
+#2. Protein and cell density
+#3. no color is not an atribute
+#4. low vs high cell density and protein type
 
-### Problem 2.1
+```
+### problem 6.4
+```{r}
+#1. The time schedule from 7:30 10:30
+#2. The different types of glyph include one for a bus, trolley, and train
+#3. The different glyphs are train, bus, and trolley, the information shows the time for each seperate stop. Also shows the duration of the route.
+#4. there is a bus, bike, train, plane, and car Guide
+```
+### problem 6.5
+```{r}
+#1.) State and polling organization
+```
+### problem 6.6
+```{r}
+#1. glyph = rectangle, graphical attrivute = color and text
+```
+### problem 6.7
+```{r}
+#1. State
+```
 
-[and so forth...]
-
+### problem 6.8
+```{r}
+#1. State, color band
+```
+### problem 6.9
+```{r}
+Small <- NCHS %>% sample_n(size=5000)
+ggplot(data=Small,aes(x=bmi,y=weight))+geom_point()+aes(colour=smoker)
+#1. Varibales : weight, bmi, smoker
+#2. Attributes: weight = y-axis, bmi = x-axis, smoker = color(yes or no)
+```
+### problem 6.10
