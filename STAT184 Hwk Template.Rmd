@@ -1,0 +1,42 @@
+---
+title: "STAT 184 Homework Exercises" 
+subtitle: "DataComputing Chapters 5 & 6"
+author: "eric weah"
+output: html_notebook
+---
+
+## Assigned Exercises
+
+- DC Chapter 5 Exercises: All 
+- DC Chapter 6 Exercises: 6.1-6.10
+
+## Front Matter
+
+```{r}
+# clean up workspace environment
+rm(list = ls())
+
+# all packages used for the assignment
+library(mosaic)
+library(tidyverse)
+
+```
+
+
+
+## Chapter 1 Exercises
+
+### Problem 1.1
+
+
+### Problem 1.2
+
+[and so forth...]
+
+
+## Chapter 2 Exercises
+
+### Problem 2.1
+
+[and so forth...]
+
