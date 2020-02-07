@@ -31,7 +31,10 @@ library(tidyverse)
 
 ### Problem 1.2
 
-[and so forth...]
+```{r}
+print("Hello")
+
+```
 
 
 ## Chapter 2 Exercises
